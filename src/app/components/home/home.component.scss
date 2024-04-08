@@ -1,0 +1,17 @@
+.projects-header {
+  position: relative;
+  &::after {
+    content: "";
+    background-color: #000;
+    border-radius: 10px;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    height: 4px;
+    width: 70px;
+  }
+}
+
+.card {
+  width: 350px;
+}

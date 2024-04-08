@@ -8,4 +8,9 @@ export const content: Routes = [
         (m) => m.NewbieModule
       ),
   },
+  {
+    path: 'home',
+    loadChildren: () =>
+      import('../../components/home/home.module').then((m) => m.HomeModule),
+  },
 ];

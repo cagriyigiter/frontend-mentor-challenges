@@ -1,0 +1,19 @@
+<div class="container mt-4">
+  <h1 class="text-center fw-bold">Frontend Mentor Challenges</h1>
+  <h2 class="projects-header fw-bold mb-4">Projects</h2>
+  <div class="row">
+    <div class="d-flex align-items-center justify-content-center flex-wrap">
+      @for(challenge of challenges; track challenge.title){
+      <div class="card m-2">
+        <div class="card-body">
+          <h5 class="card-title">{{ challenge.title }}</h5>
+          <p class="card-text">{{ challenge.description }}</p>
+          <a [href]="challenge.link" class="btn btn-primary">
+            <i class="bi bi-eye"></i>
+          </a>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+</div>
