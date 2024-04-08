@@ -1,22 +1,22 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { ContentComponent } from './shared/components/layout/content/content.component';
-import { content } from './shared/routes/routes';
+import { NgModule } from "@angular/core";
+import { RouterModule, Routes } from "@angular/router";
+import { ContentComponent } from "./shared/components/layout/content/content.component";
+import { content } from "./shared/routes/routes";
 
 export const routes: Routes = [
   {
-    path: '',
-    redirectTo: 'home',
-    pathMatch: 'full',
+    path: "",
+    redirectTo: "home",
+    pathMatch: "full",
   },
   {
-    path: '',
+    path: "",
     component: ContentComponent,
     children: content,
   },
   {
-    path: '**',
-    redirectTo: 'home',
+    path: "**",
+    redirectTo: "home",
   },
 ];
 
@@ -24,8 +24,9 @@ export const routes: Routes = [
   imports: [
     [
       RouterModule.forRoot(routes, {
-        anchorScrolling: 'enabled',
-        scrollPositionRestoration: 'enabled',
+        anchorScrolling: "enabled",
+        scrollPositionRestoration: "enabled",
+        useHash: true,
       }),
     ],
   ],
