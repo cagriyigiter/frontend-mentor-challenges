@@ -6,12 +6,17 @@ import { content } from './shared/routes/routes';
 export const routes: Routes = [
   {
     path: '',
+    redirectTo: 'home',
+    pathMatch: 'full',
+  },
+  {
+    path: '',
     component: ContentComponent,
     children: content,
   },
   {
     path: '**',
-    redirectTo: '',
+    redirectTo: 'home',
   },
 ];
 
